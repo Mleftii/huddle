@@ -262,6 +262,7 @@ h1, h2, h3, h4, h5, h6 {
         left: 0;
         right: 0;
         text-align: center;
+        z-index: 1;
     }
     
     #ready .ready button {
@@ -278,6 +279,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 10rem 7.5rem 3rem;
         background-color: hsl(192, 100%, 9%);
         position: relative;
+        z-index: -1;
     }
     
     .footer-content {
