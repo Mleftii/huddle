@@ -5,16 +5,25 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    border: 2px solid red;
 }
 
-html, body {
-    min-width: fit-content;
-}
+
 
 body {
     background-image: url(img/bg-hero-desktop.svg);
     background-color: hsl(193, 100%, 96%);
     background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-width: fit-content;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: 0 auto;
 }
 
 p, a, button {
@@ -68,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bottom-head .first p {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     line-height: 1.6;
     font-family: 'Open Sans', sans-serif;
 }
@@ -104,11 +113,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2.5rem 2.5rem 2.5rem 5rem;
 }
 
-#main-content .main-content .main-content-item h2, #main-content .main-content .main-content-item p {
-    width: 100%;
-}
-
-#main-content .main-content .main-content-2 img {
+#main-content .main-content .main-content-item h2, #main-content .main-content .main-content-item p, #main-content .main-content .main-content-2 img {
     width: 100%;
 }
 
@@ -198,14 +203,15 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
 }
 
-@media screen and (max-width: 720px) {
 
+/* Media Queries  */
+@media screen and (max-width: 720px) {
     
-#menu {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-}
+    #menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+    }
 
     body {
         background-image: url(img/bg-hero-mobile.svg);
@@ -225,9 +231,8 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .bottom-head .second img {
-        width: 500px;
+        width: 100%;
     }
-
     
     .bottom-head .first p {
         line-height: 1.6;
@@ -248,13 +253,16 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         text-align: center;
     }
+
+    #main-content .main-content .main-content-item {
+        padding: 2.5rem 0.5rem 2.5rem;
+    }
     
     #ready .ready {
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
-        padding: 3rem;
+        padding: 1rem;
         margin-bottom: 100px;
-        background-color: #ffffff;
         position: absolute;
         margin-top: -120px;
         top: 0;
@@ -287,7 +295,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .footer-content .first-footer {
         width: 100%;
-        margin-right: 7.5rem;
+        margin-right: unset;
         margin-bottom: 2.5rem;
     }
     
@@ -298,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .footer-content .icon-text img {
-        margin-right: 1.5rem;
+        margin-right: 0.5rem;
     }
     
     .footer-content .second-footer, .footer-content .third-footer {
